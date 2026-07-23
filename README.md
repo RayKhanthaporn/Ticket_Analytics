@@ -7,7 +7,7 @@ This project combines a Jupyter notebook workflow and a Streamlit-based ticket a
 The repository contains:
 
 - [Ticket_Analytics.ipynb](Ticket_Analytics.ipynb) — notebook for data exploration, enrichment, and analysis
-- [streamlit_ticket_agent.py](streamlit_ticket_agent.py) — Streamlit app for interactive ticket insights and question answering
+- [streamlit_ticket_agent.py](streamlit_ticket_agent.py) — Streamlit app is AI Agent for interactive ticket insights and question answering
 - [requirements.txt](requirements.txt) — Python dependencies for the notebook and app
 
 ## Project lineage
