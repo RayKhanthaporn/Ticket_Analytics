@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+
+# Environment variables file
+.env
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Editor files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
