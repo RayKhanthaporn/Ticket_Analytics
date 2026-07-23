@@ -1,0 +1,15 @@
+{
+  "name": "TechSolve Operations",
+  "dataColors": [
+    "#123B5D",
+    "#2F7E8D",
+    "#66A5AD",
+    "#B8D8D8",
+    "#E08E45",
+    "#B42318",
+    "#6B7280"
+  ],
+  "background": "#F7F9FB",
+  "foreground": "#1F2937",
+  "tableAccent": "#2F7E8D"
+}

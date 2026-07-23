@@ -1,0 +1,31 @@
+{
+  "tables": [
+    {
+      "name": "FactTickets_2024_2025",
+      "file": "FactTickets_2024_2025.csv"
+    },
+    {
+      "name": "DimHolidayCalendar_2024_2025",
+      "file": "DimHolidayCalendar_2024_2025.csv"
+    },
+    {
+      "name": "DimIssueTaxonomy",
+      "file": "DimIssueTaxonomy.csv"
+    }
+  ],
+  "relationships": [
+    {
+      "from": "DimHolidayCalendar_2024_2025.DateRegionKey",
+      "to": "FactTickets_2024_2025.DateRegionKey",
+      "cardinality": "one-to-many"
+    }
+  ],
+  "reportPages": [
+    "Operations Overview",
+    "Issue Demand & Root Cause",
+    "Status & Flow",
+    "Resolution & SLA",
+    "Holiday & Capacity Impact",
+    "Data Quality & Governance"
+  ]
+}

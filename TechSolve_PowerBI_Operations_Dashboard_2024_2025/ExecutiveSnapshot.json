@@ -1,0 +1,13 @@
+{
+  "ticket_rows_2024_2025": 67167,
+  "rows_2024": 67157,
+  "rows_2025": 10,
+  "median_resolution_hours": 120.5,
+  "average_first_response_hours": 36.42433397352866,
+  "reported_sla_breach_rate": 0.5012282817455,
+  "sla_mismatch_rate": 0.4983995116649545,
+  "escalation_rate": 0.5031042029568091,
+  "average_csat": 3.0005014054546835,
+  "csat_response_rate": 0.9798710676373814,
+  "holiday_ticket_count": 2161
+}

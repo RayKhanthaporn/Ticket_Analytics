@@ -1,0 +1,24 @@
+// Core volume
+Ticket Count = COUNTROWS(FactTickets_2024_2025)
+Active Status Tickets = CALCULATE([Ticket Count], FactTickets_2024_2025[RK_StatusGroup] = "Active")
+Waiting Tickets = CALCULATE([Ticket Count], FactTickets_2024_2025[RK_StatusGroup] = "Waiting")
+Completed Tickets = CALCULATE([Ticket Count], FactTickets_2024_2025[RK_StatusGroup] = "Completed")
+
+// Speed
+Median Resolution Hours = MEDIAN(FactTickets_2024_2025[resolution_time_hours])
+Average Resolution Hours = AVERAGE(FactTickets_2024_2025[resolution_time_hours])
+P90 Resolution Hours = PERCENTILEX.INC(FactTickets_2024_2025, FactTickets_2024_2025[resolution_time_hours], 0.9)
+Median First Response Hours = MEDIAN(FactTickets_2024_2025[first_response_time_hours])
+P90 First Response Hours = PERCENTILEX.INC(FactTickets_2024_2025, FactTickets_2024_2025[first_response_time_hours], 0.9)
+
+// Quality / experience
+Reported SLA Breach Rate = DIVIDE(CALCULATE([Ticket Count], FactTickets_2024_2025[sla_breached] = "Yes"), [Ticket Count])
+Calculated SLA Mismatch Rate = DIVIDE(SUM(FactTickets_2024_2025[RK_SLAMismatch]), [Ticket Count])
+Escalation Rate = DIVIDE(CALCULATE([Ticket Count], FactTickets_2024_2025[escalated] = "Yes"), [Ticket Count])
+Average CSAT = AVERAGE(FactTickets_2024_2025[csat_score])
+CSAT Response Rate = DIVIDE(COUNT(FactTickets_2024_2025[csat_score]), [Ticket Count])
+
+// Calendar
+Holiday Ticket Count = CALCULATE([Ticket Count], FactTickets_2024_2025[IsPublicHoliday] = 1)
+Holiday Ticket Share = DIVIDE([Holiday Ticket Count], [Ticket Count])
+Business Day Ticket Count = CALCULATE([Ticket Count], FactTickets_2024_2025[IsBusinessDay] = 1)
