@@ -93,6 +93,42 @@ Open the local URL shown in the terminal, usually:
 http://localhost:8501
 ```
 
+## Streamlit ticket agent details
+
+The Streamlit app in [streamlit_ticket_agent.py](streamlit_ticket_agent.py) is a manager-focused ticket analytics assistant for the TechSolve dataset. It is designed for operational users who want to ask natural-language questions about ticket trends without writing SQL or Python.
+
+### What the app does
+
+- Loads a processed ticket CSV and shows a quick overview of the dataset
+- Displays summary metrics for total tickets, categories, and operational teams
+- Surfaces top categories and team workloads in the main interface
+- Provides sidebar quick prompts for common questions such as:
+  - ticket volume trends
+  - team workload and bottlenecks
+  - holiday-related ticket spikes
+  - category mapping or review-queue issues
+- Sends the user question plus a small set of sample rows to an OpenAI model for a dataset-grounded answer
+
+### How it works
+
+1. The app reads the ticket data from a CSV file.
+2. It prepares a compact prompt using the available columns and a few example rows.
+3. The model answers using only the information in that prompt.
+4. If the data is insufficient or the question cannot be supported by the file, the app is designed to say so explicitly.
+
+### Input and configuration
+
+- Default data file: [drive-download-20260721T233205Z-1-001/tickets_holidays_categorised_df.csv](drive-download-20260721T233205Z-1-001/tickets_holidays_categorised_df.csv)
+- Override the source file with the `TICKET_DATA_PATH` environment variable if needed
+- Provide an OpenAI API key through `OPENAI_API_KEY`, a Streamlit secrets file, or by entering it in the sidebar when the app starts
+
+### Recommended workflow
+
+- Start the app locally with the command above
+- Enter your OpenAI API key in the sidebar if prompted
+- Use one of the quick prompts or ask your own question about the dataset
+- Review the generated answer alongside the dataset summary and sample rows
+
 ## Environment variables
 
 The app can run with the default dataset path, but you can override it if needed.
