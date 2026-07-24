@@ -118,7 +118,7 @@ The Streamlit app in [streamlit_ticket_agent.py](streamlit_ticket_agent.py) is a
 
 ### Input and configuration
 
-- Default data file: [drive-download-20260721T233205Z-1-001/tickets_holidays_categorised_df.csv](drive-download-20260721T233205Z-1-001/tickets_holidays_categorised_df.csv)
+- Default data file: [tickets_holidays_categorised_df.csv](tickets_holidays_categorised_df.csv)
 - Override the source file with the `TICKET_DATA_PATH` environment variable if needed
 - Provide an OpenAI API key through `OPENAI_API_KEY`, a Streamlit secrets file, or by entering it in the sidebar when the app starts
 
