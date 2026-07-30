@@ -1,6 +1,6 @@
 # Ticket Analytics
 
-This project combines a Jupyter notebook workflow and a Streamlit-based ticket analytics assistant using AI agent for exploring and summarising ticket data.
+This project combines a Jupyter Notebook workflow, a Streamlit-based ticket analytics assistant powered by an AI agent for exploring and summarising ticket data, and a Power BI dashboard demonstration. See the Ticket Agent AI demo for more details.
 
 ## Project overview
 
